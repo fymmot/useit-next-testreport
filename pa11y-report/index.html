@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Pa11y CI Accessibility Report Summary</title>
+	<style>
+		body {
+			background-color: #ffffff;
+			color: #333333;
+			font-family:
+				"Segoe UI",
+				Roboto,
+				"Noto Sans",
+				Ubuntu,
+				Cantarell,
+				"Helvetica Neue",
+				sans-serif;
+			font-size: 16px;
+			line-height: 1.3rem;
+			margin: 0;
+			padding: 0;
+		}
+
+		main {
+			margin: 0 auto;
+			max-width: 1000px;
+			padding: 1.25rem;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+			margin: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		h2 {
+			font-size: 1.15rem;
+			font-weight: normal;
+			margin: 0 0 0.75rem;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		.counts {
+			display: inline-grid;
+			grid-template-columns: repeat(3, 1fr);
+			margin: 0.75rem 0;
+			width: 27rem;
+		}
+
+		.page-error .counts {
+			grid-template-columns: 1fr;
+		}
+
+		.count {
+			background-color: #e8e8e8;
+			box-shadow: 0.1rem 0.25rem 0.5rem rgba(0 0 0 / 15%);
+			color: #2d2d2d;
+			display: inline-grid;
+			font-size: 1rem;
+			grid-template-columns: 0.35rem 1fr;
+			margin-right: 0.75rem;
+		}
+
+		.count .left-bar {
+			background-color: #7c7c7c;
+		}
+
+		.count .body {
+			border-color: #c9c9c9;
+			border-style: solid;
+			border-width: 1px 1px 1px 0;
+			overflow-x: hidden;
+			padding: 0.35rem 0.7rem;
+		}
+
+		.error {
+			background-color: #f8d7da;
+			color: #67191f;
+		}
+
+		.warning {
+			background-color: #fff3cd;
+			color: #544003;
+		}
+
+		.notice {
+			background-color: #cfe2ff;
+			color: #062c65;
+		}
+
+		.failure {
+			background-color: #f8e5d7;
+			color: #673a19;
+		}
+
+		.error>.left-bar {
+			background-color: #d53447;
+		}
+
+		.error>.body {
+			border-color: #f2bbc1;
+		}
+
+		.warning>.left-bar {
+			background-color: #c79500;
+		}
+
+		.warning>.body {
+			border-color: #ffd761;
+		}
+
+		.notice>.left-bar {
+			background-color: #015cda;
+		}
+
+		.notice>.body {
+			border-color: #a9cefe;
+		}
+
+		.failure>.left-bar {
+			background-color: #d57234;
+		}
+
+		.failure>.body {
+			border-color: #f2d0bb;
+		}
+
+		.count.hidden {
+			background-color: #f6f6f6;
+			color: #323232;
+		}
+
+		.count.hidden .left-bar {
+			background-color: #c0c0c0;
+		}
+
+		.count.hidden .body {
+			border-color: #e9e9e9;
+		}
+
+		.pages {
+			list-style-type: none;
+			margin: 0.5rem 0 1rem;
+			padding: 0;
+		}
+
+		.page {
+			background-color: #ffffff;
+			border: 1px solid #cccccc;
+			border-radius: 0;
+			box-shadow: 0.1rem 0.25rem 0.5rem rgba(0 0 0 / 15%);
+			display: grid;
+			grid-template-columns: 1.5fr 1fr;
+			margin: 0;
+			margin-bottom: 1.5rem;
+			padding: 0.25rem 0.5rem;
+		}
+
+		.page.hidden {
+			display: none;
+		}
+
+		.page-link {
+			align-self: center;
+			display: inline-block;
+			font-size: 1.05rem;
+			overflow: hidden;
+			padding: 0 0.3rem 0 0.75rem;
+			text-align: left;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.filter {
+			display: inline-grid;
+			grid-template-columns: 1.5fr repeat(3, 1fr);
+			margin: 0.75rem 0;
+		}
+
+		.label {
+			align-self: center;
+			display: inline-block;
+			font-size: 1.15em;
+			padding-right: 0.5rem;
+		}
+
+		.button:hover {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<h1>Pa11y CI Accessibility Report Summary</h1>
+		<h2>Generated at: Tue Feb 07 2023 15:27:35 GMT+0000 (Coordinated Universal Time)</h2>
+		<h2>Summary: 37 pages (37 passed / 0
+			failed), 0 accessibility issues</h2>
+		<div class="filter">
+			<span class="label">Filter page results: </span>
+			<span class="count error button" id="pa11y-issues" title="Pa11y analyzed page and found issues">
+				<span class="left-bar" aria-hidden="true"></span>
+				<span class="body">Pa11y Issues</span>
+			</span>
+			<span class="count button" id="no-issues" title="Pa11y analyzed page and found no issues">
+				<span class="left-bar" aria-hidden="true"></span>
+				<span class="body">No Issues</span>
+			</span>
+			<span class="count failure button" id="page-errors" title="Pa11y failed to analyze page">
+				<span class="left-bar" aria-hidden="true"></span>
+				<span class="body">Page Errors</span>
+			</span>
+		</div>
+		<ul class="pages">
+<li class="page"><a class="page-link" href="localhost-3000.html" title="http://localhost:3000/">http://localhost:3000/</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-about.html" title="http://localhost:3000/about">http://localhost:3000/about</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-confirmation.html" title="http://localhost:3000/confirmation">http://localhost:3000/confirmation</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-contact.html" title="http://localhost:3000/contact">http://localhost:3000/contact</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts.html" title="http://localhost:3000/posts">http://localhost:3000/posts</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-services.html" title="http://localhost:3000/services">http://localhost:3000/services</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-404.html" title="http://localhost:3000/404">http://localhost:3000/404</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-404.html" title="http://localhost:3000/no/404">http://localhost:3000/no/404</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-en-404.html" title="http://localhost:3000/en/404">http://localhost:3000/en/404</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-about.html" title="http://localhost:3000/no/about">http://localhost:3000/no/about</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-en-about.html" title="http://localhost:3000/en/about">http://localhost:3000/en/about</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-confirmation.html" title="http://localhost:3000/no/confirmation">http://localhost:3000/no/confirmation</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-en-confirmation.html" title="http://localhost:3000/en/confirmation">http://localhost:3000/en/confirmation</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-contact.html" title="http://localhost:3000/no/contact">http://localhost:3000/no/contact</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-en-contact.html" title="http://localhost:3000/en/contact">http://localhost:3000/en/contact</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no.html" title="http://localhost:3000/no">http://localhost:3000/no</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-en.html" title="http://localhost:3000/en">http://localhost:3000/en</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-goer-din-webbplats-mer-tillgaenglig-med-personalisering.html" title="http://localhost:3000/posts/goer-din-webbplats-mer-tillgaenglig-med-personalisering">http://localhost:3000/posts/goer-din-webbplats-mer-tillgaenglig-med-personalisering</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-vintererbjudande-fa-en-kostnadsfri-checklista.html" title="http://localhost:3000/posts/vintererbjudande-fa-en-kostnadsfri-checklista">http://localhost:3000/posts/vintererbjudande-fa-en-kostnadsfri-checklista</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-posts-mot-useit-i-oktober.html" title="http://localhost:3000/no/posts/mot-useit-i-oktober">http://localhost:3000/no/posts/mot-useit-i-oktober</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-foelj-den-nya-tillgaenglighetslagen-och-oeka-din-konvertering.html" title="http://localhost:3000/posts/foelj-den-nya-tillgaenglighetslagen-och-oeka-din-konvertering">http://localhost:3000/posts/foelj-den-nya-tillgaenglighetslagen-och-oeka-din-konvertering</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-en-posts-our-new-website-is-launched.html" title="http://localhost:3000/en/posts/our-new-website-is-launched">http://localhost:3000/en/posts/our-new-website-is-launched</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-webbinarium-dags-att-hoegprioritera-tillgaenglighet.html" title="http://localhost:3000/posts/webbinarium-dags-att-hoegprioritera-tillgaenglighet">http://localhost:3000/posts/webbinarium-dags-att-hoegprioritera-tillgaenglighet</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-fragor-och-svar-om-dos-lagen.html" title="http://localhost:3000/posts/fragor-och-svar-om-dos-lagen">http://localhost:3000/posts/fragor-och-svar-om-dos-lagen</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-posts-bra-nok-med-automatiske-tester.html" title="http://localhost:3000/no/posts/bra-nok-med-automatiske-tester">http://localhost:3000/no/posts/bra-nok-med-automatiske-tester</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-foerelaesning-10-november-foer-kommunerna-i-naetverket-digidig.html" title="http://localhost:3000/posts/foerelaesning-10-november-foer-kommunerna-i-naetverket-digidig">http://localhost:3000/posts/foerelaesning-10-november-foer-kommunerna-i-naetverket-digidig</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-nu-slaepper-vi-nya-useit-se.html" title="http://localhost:3000/posts/nu-slaepper-vi-nya-useit-se">http://localhost:3000/posts/nu-slaepper-vi-nya-useit-se</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-posts-offentlig-sektor-skal-na-rapportere-uu-status-arlig.html" title="http://localhost:3000/no/posts/offentlig-sektor-skal-na-rapportere-uu-status-arlig">http://localhost:3000/no/posts/offentlig-sektor-skal-na-rapportere-uu-status-arlig</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-tillgaenglighetsdirektivet.html" title="http://localhost:3000/posts/tillgaenglighetsdirektivet">http://localhost:3000/posts/tillgaenglighetsdirektivet</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-raecker-det-med-automatiska-tester.html" title="http://localhost:3000/posts/raecker-det-med-automatiska-tester">http://localhost:3000/posts/raecker-det-med-automatiska-tester</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-en-posts-make-your-website-more-accessible-with-personalization.html" title="http://localhost:3000/en/posts/make-your-website-more-accessible-with-personalization">http://localhost:3000/en/posts/make-your-website-more-accessible-with-personalization</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-posts-gjor-ditt-nettsted-mer-tilgjengelig-med-personlig-tilpasning.html" title="http://localhost:3000/no/posts/gjor-ditt-nettsted-mer-tilgjengelig-med-personlig-tilpasning">http://localhost:3000/no/posts/gjor-ditt-nettsted-mer-tilgjengelig-med-personlig-tilpasning</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-posts-kom-och-traeffa-oss-pa-sitevisiondagarna-18-19-oktober.html" title="http://localhost:3000/posts/kom-och-traeffa-oss-pa-sitevisiondagarna-18-19-oktober">http://localhost:3000/posts/kom-och-traeffa-oss-pa-sitevisiondagarna-18-19-oktober</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-posts.html" title="http://localhost:3000/no/posts">http://localhost:3000/no/posts</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-en-posts.html" title="http://localhost:3000/en/posts">http://localhost:3000/en/posts</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-no-services.html" title="http://localhost:3000/no/services">http://localhost:3000/no/services</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li><li class="page"><a class="page-link" href="localhost-3000-en-services.html" title="http://localhost:3000/en/services">http://localhost:3000/en/services</a><p class="counts">
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 errors</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 warnings</span>
+					</span>
+					<span class="count">
+						<span class="left-bar" aria-hidden="true"></span>
+						<span class="body">0 notices</span>
+					</span>
+				</p>
+			</li>		</ul>
+	</main>
+	<script>
+		const togglePages = (btn, pageQuery) => {
+			const className = 'hidden';
+			document.getElementById(btn).classList.toggle(className);
+			document.querySelectorAll(pageQuery).forEach(page => {
+				page.classList.toggle(className);
+			});
+		};
+
+		document.getElementById('pa11y-issues').addEventListener('click', () => togglePages('pa11y-issues', '.page.has-errors, .page.has-warnings, .page.has-notices'));
+		document.getElementById('page-errors').addEventListener('click', () => togglePages('page-errors', '.page.page-error'));
+		document.getElementById('no-issues').addEventListener('click', () => togglePages('no-issues', '.page:not(.has-errors, .has-warnings, .has-notices, .page-error)'));
+	</script>
+</body>
+
+</html>
