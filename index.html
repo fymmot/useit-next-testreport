@@ -173,18 +173,15 @@
     return data.token
   }
 
-  const accessToken = getAccessToken()
-  console.log(accessToken)
-
-
-
-  const headers = new Headers({
-    "Authorization": `Token ${accessToken}`,
-    "Accept": "application/vnd.github+json"
-  });
-
 
   async function getWorkflows(repoOwner, repoName) {
+
+    const accessToken = await getAccessToken()
+    const headers = new Headers({
+      "Authorization": `Token ${accessToken}`,
+      "Accept": "application/vnd.github+json"
+    });
+
     const response = await fetch(
             `https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows`,
             {
@@ -204,12 +201,26 @@
   getWorkflows("fymmot", "useit-next");
 
   const getLastRun = async (workflowName) => {
+
+    const accessToken = await getAccessToken()
+    const headers = new Headers({
+      "Authorization": `Token ${accessToken}`,
+      "Accept": "application/vnd.github+json"
+    });
+
     const res = await fetch(`https://api.github.com/repos/fymmot/useit-next/actions/workflows/${workflowName}/runs`, { headers });
     const data = await res.json();
     return data.workflow_runs[0].id;
   };
 
   const getRunStatus = async (runId) => {
+
+    const accessToken = await getAccessToken()
+    const headers = new Headers({
+      "Authorization": `Token ${accessToken}`,
+      "Accept": "application/vnd.github+json"
+    });
+
     const res = await fetch(`https://api.github.com/repos/fymmot/useit-next/actions/runs/${runId}`, { headers });
     const data = await res.json();
     return { date: data.updated_at, status: data.conclusion };
