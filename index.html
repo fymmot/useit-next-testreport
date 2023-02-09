@@ -170,7 +170,6 @@
           .then(response => response.json())
           .then(data => {
             accessToken = data.token;
-            console.log(accessToken);
           });
 
 
@@ -178,6 +177,8 @@
     "Authorization": `Token ${accessToken}`,
     "Accept": "application/vnd.github+json"
   });
+
+  console.log(headers)
 
   async function getWorkflows(repoOwner, repoName) {
     const response = await fetch(
