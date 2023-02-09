@@ -165,7 +165,8 @@
 
 </main>
 <script>
-  const accessToken = "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";
+  const accessToken = process.env.GITHUB_PAT
+  console.log(process.env.GITHUB_PAT)
 
   const headers = new Headers({
     "Authorization": `Token ${accessToken}`,
