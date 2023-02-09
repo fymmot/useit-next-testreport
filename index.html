@@ -169,7 +169,6 @@
   async function getAccessToken() {
     const response = await fetch("https://status.useit.se/.netlify/functions/get-github-token")
     const data = await response.json()
-    console.log(data)
     return data.token
   }
 
@@ -195,7 +194,6 @@
     }
 
     const workflows = await response.json();
-    console.log(workflows);
   }
 
   getWorkflows("fymmot", "useit-next");
