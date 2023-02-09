@@ -22,7 +22,7 @@
       --white: #fff;
     }
 
-    :root:not(.dark) {
+    :root {
       --text-color: #111;
       --bg-color: #fefefe;
       --accent-color: var(--beige);
@@ -35,17 +35,19 @@
       --focus-color: var(--darkerblue);
     }
 
-    :root.dark {
-      --text-color: #fff;
-      --bg-color: #0e1220;
-      --accent-color: #171f2e;
-      --button-color: #be4350;
-      --bg-alt: #171f2e;
-      --bg-grey: #efefef;
-      --border-color: #666;
-      --blue-color: #171f2e;
-      --light-blue: #171f2e;
-      --focus-color: #fff;
+    @media screen and (prefers-color-scheme: dark) {
+      :root {
+        --text-color: #fff;
+        --bg-color: #0e1220;
+        --accent-color: #171f2e;
+        --button-color: #be4350;
+        --bg-alt: #171f2e;
+        --bg-grey: #efefef;
+        --border-color: #666;
+        --blue-color: #171f2e;
+        --light-blue: #171f2e;
+        --focus-color: #fff;
+      }
     }
 
     body {
@@ -113,11 +115,29 @@
 
     }
     .links a[href] {
-     height: 100%;
+      height: 100%;
+      color: var(--text-color);
+      text-decoration: none;
     }
 
-    .e2e-link, .a11y-link {
+    .links a[href]:hover, .links a[href]:focus {
+      text-underline-offset: 0.2em;
+      text-decoration: underline;
+    }
 
+    .e2e-link.success, .a11y-link.success {
+      box-shadow: inset 0 0 0 8px var(--green);
+    }
+
+    .e2e-link.failure, .a11y-link.failure {
+      box-shadow: inset 0 0 0 8px var(--red);
+    }
+
+    .e2e-link.success .result, .a11y-link.success .result, .e2e-link.failure .result, .a11y-link.failure .result {
+        font-size: 1rem;
+        font-weight: 400;
+        opacity: 0.8;
+        margin-top: 1rem;
     }
 
   </style>
@@ -131,11 +151,13 @@
       <a href="a11y">
         Pa11y accessibility tests
       </a>
+      <div class="result"></div>
     </li>
     <li class="e2e-link">
       <a href="e2e">
         Playwright end-to-end tests
       </a>
+      <div class="result"></div>
     </li>
   </ul>
 
@@ -143,6 +165,80 @@
 
 </main>
 <script>
+  const accessToken = "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";
+
+  const headers = new Headers({
+    "Authorization": `Token ${accessToken}`,
+    "Accept": "application/vnd.github+json"
+  });
+
+  async function getWorkflows(repoOwner, repoName) {
+    const response = await fetch(
+            `https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows`,
+            {
+              headers,
+            }
+    );
+
+    if (!response.ok) {
+      console.error("Failed to retrieve workflows");
+      return;
+    }
+
+    const workflows = await response.json();
+    console.log(workflows);
+  }
+
+  getWorkflows("fymmot", "useit-next");
+
+  const getLastRun = async (workflowName) => {
+    const res = await fetch(`https://api.github.com/repos/fymmot/useit-next/actions/workflows/${workflowName}/runs`, { headers });
+    const data = await res.json();
+    return data.workflow_runs[0].id;
+  };
+
+  const getRunStatus = async (runId) => {
+    const res = await fetch(`https://api.github.com/repos/fymmot/useit-next/actions/runs/${runId}`, { headers });
+    const data = await res.json();
+    return { date: data.updated_at, status: data.conclusion };
+  };
+
+  const displayStatus = async (workflowName) => {
+    const runId = await getLastRun(workflowName);
+    const status = await getRunStatus(runId);
+    return status
+  };
+
+  let pa11yStatus = undefined;
+  let e2eStatus = undefined;
+
+  const getStatusString = (status, date) => {
+    const formattedDateTime = new Date(date).toLocaleString("sv-SE", {
+      dateStyle: "short",
+      timeStyle: "short",
+    });
+
+    if (status === "success") {
+      return `Last run: ${formattedDateTime} - Success`;
+    }
+    if (status === "failure") {
+      return `Last run: ${formattedDateTime} - Failure`;
+    }
+  };
+
+  displayStatus(43311163).then((status) => {
+    pa11yStatus = status.status;
+    const pa11yLink = document.getElementsByClassName("a11y-link")[0];
+    pa11yLink.classList.add(pa11yStatus);
+    pa11yLink.getElementsByClassName("result")[0].innerHTML = getStatusString(status.status, status.date);
+
+  });
+  displayStatus(47259483).then((status) => {
+    e2eStatus = status.status;
+    const e2eLink = document.getElementsByClassName("e2e-link")[0];
+    e2eLink.classList.add(e2eStatus);
+    e2eLink.getElementsByClassName("result")[0].innerHTML = getStatusString(status.status, status.date);
+  });
 
 </script>
 </body>
