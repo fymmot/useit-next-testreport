@@ -169,8 +169,7 @@
   fetch("https://status.useit.se/.netlify/functions/get-github-token")
           .then(response => response.json())
           .then(data => {
-            console.log(data)
-            accessToken = data.body.token;
+            accessToken = data.token;
             console.log(accessToken);
           });
 
