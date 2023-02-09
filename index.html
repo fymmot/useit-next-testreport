@@ -165,8 +165,14 @@
 
 </main>
 <script>
-  const accessToken = process.env.GITHUB_TOKEN
-  console.log(process.env.GITHUB_TOKEN)
+  let accessToken = undefined
+  fetch("/.netlify/functions/get-github-pat")
+          .then(response => response.json())
+          .then(data => {
+            accessToken = data.body;
+            console.log(accessToken);
+          });
+
 
   const headers = new Headers({
     "Authorization": `Token ${accessToken}`,
