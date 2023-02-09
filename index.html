@@ -165,15 +165,16 @@
 
 </main>
 <script>
-  let accessToken = undefined
-  await fetch("https://status.useit.se/.netlify/functions/get-github-token")
-          .then(response => response.json())
-          .then(data => {
-            console.log(data.token)
-            accessToken = data.token;
-          });
 
-  console.log(accessToken)
+  async function getAccessToken() {
+    const response = await fetch("https://status.useit.se/.netlify/functions/get-github-token")
+    const data = await response.json()
+    return data.token
+  }
+
+  const accessToken = await getAccessToken()
+
+
 
   const headers = new Headers({
     "Authorization": `Token ${accessToken}`,
