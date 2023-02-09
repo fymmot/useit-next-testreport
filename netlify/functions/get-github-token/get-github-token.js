@@ -3,7 +3,7 @@ const handler = async () => {
   try {
     return {
       statusCode: 200,
-      body: process.env.GITHUB_TOKEN,
+      body: {"token": process.env.GITHUB_TOKEN},
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
       // isBase64Encoded: true,
