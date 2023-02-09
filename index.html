@@ -166,7 +166,7 @@
 </main>
 <script>
   let accessToken = undefined
-  fetch("/.netlify/functions/get-github-pat")
+  fetch("https://status.useit.se/.netlify/functions/get-github-token")
           .then(response => response.json())
           .then(data => {
             accessToken = data.body;
