@@ -105,19 +105,24 @@
     }
 
     .links li {
-      font-size: 1.3rem;
       list-style: none;
       margin: 0;
-      padding: 3rem;
-      font-weight: 700;
-      border-radius: 8px;
-      background-color: var(--bg-color);
 
     }
     .links a[href] {
+      display: flex;
       height: 100%;
+      padding: 2rem;
+      justify-content: center;
+flex-direction: column;
+        align-items: center;
       color: var(--text-color);
       text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 700;
+      border-radius: 8px;
+      background-color: var(--bg-color);
+      position: relative;
     }
 
     .links a[href]:hover, .links a[href]:focus {
@@ -125,11 +130,11 @@
       text-decoration: underline;
     }
 
-    .e2e-link.success, .a11y-link.success {
+    .e2e-link.success a, .a11y-link.success a{
       box-shadow: inset 0 0 0 8px var(--green);
     }
 
-    .e2e-link.failure, .a11y-link.failure {
+    .e2e-link.failure a, .a11y-link.failure a{
       box-shadow: inset 0 0 0 8px var(--red);
     }
 
@@ -138,6 +143,25 @@
         font-weight: 400;
         opacity: 0.8;
         margin-top: 1rem;
+    }
+
+    .success-icon, .failure-icon {
+      position: absolute;
+      top: 15%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: none;
+        margin-left: auto;
+      margin-right: auto;
+        margin-bottom: 1rem;
+    }
+    .success .success-icon {
+        display: block;
+      fill: var(--green);
+    }
+    .failure .failure-icon {
+      display: block;
+      fill: var(--red);
     }
 
   </style>
@@ -149,12 +173,16 @@
   <ul class="links">
     <li class="a11y-link">
       <a href="a11y">
+        <svg class="success-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DoneIcon"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+        <svg class="failure-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         Pa11y accessibility tests
       </a>
       <div class="result"></div>
     </li>
     <li class="e2e-link">
       <a href="e2e">
+        <svg class="success-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DoneIcon"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+        <svg class="failure-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         Playwright end-to-end tests
       </a>
       <div class="result"></div>
