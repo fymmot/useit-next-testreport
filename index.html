@@ -217,7 +217,32 @@ flex-direction: column;
     return data.token
   }
 
-  async function getLatestBuildUrl() {
+  async function getPercy() {
+
+    const accessToken = await getPercyAccessToken()
+    const headers = new Headers({
+      "Authorization": `Token ${accessToken}`,
+    });
+
+    const response = await fetch(
+            `https://percy.io/api/v1/projects/dfbb2c55/useit-next/builds?limit=1`,
+            {
+              headers,
+            }
+    );
+
+    if (!response.ok) {
+      console.error("Failed to retrieve Percy builds");
+      return;
+    }
+
+    const percyBuilds = await response.json();
+    console.log(percyBuilds)
+  }
+
+  getPercy()
+
+  /*async function getLatestBuildUrl() {
     // Replace YOUR_API_TOKEN and YOUR_PROJECT_ID with your actual values
     var apiEndpoint = "https://percy.io/api/v1/projects/dfbb2c55/useit-next/builds?limit=1";
     const authToken = await getPercyAccessToken()
@@ -242,7 +267,7 @@ flex-direction: column;
 
   window.onload = function() {
     getLatestBuildUrl();
-  };
+  };*/
 
 </script>
 
