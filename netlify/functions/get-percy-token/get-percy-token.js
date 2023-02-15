@@ -3,7 +3,7 @@ const handler = async () => {
   try {
     return {
       statusCode: 200,
-      body: JSON.stringify({token: process.env.PERCY_TOKEN})
+      body: JSON.stringify({token: process.env.GITHUB_TOKEN})
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
       // isBase64Encoded: true,

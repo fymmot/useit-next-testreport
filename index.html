@@ -196,11 +196,56 @@ flex-direction: column;
         <div class="result"></div>
       </a>
     </li>
+    <li class="percy-link">
+      <a href="e2e">
+        <svg class="success-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DoneIcon"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+        <svg class="failure-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        Percy visual tests
+        <div class="result"></div>
+      </a>
+    </li>
   </ul>
 
 
 
 </main>
+
+<script>
+  async function getPercyAccessToken() {
+    const response = await fetch("https://status.useit.se/.netlify/functions/get-percy-token")
+    const data = await response.json()
+    return data.token
+  }
+
+  async function getLatestBuildUrl() {
+    // Replace YOUR_API_TOKEN and YOUR_PROJECT_ID with your actual values
+    var apiEndpoint = "https://percy.io/api/v1/projects/dfbb2c55/useit-next/builds?limit=1";
+    const authToken = await getPercyAccessToken()
+
+    // Make a GET request to the Percy API
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", apiEndpoint);
+    xhr.setRequestHeader("Authorization", "Token " + authToken);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Parse the response JSON and get the URL of the latest build
+        var response = JSON.parse(xhr.responseText);
+        var latestBuildUrl = response[0].web_url;
+
+        // Use the latest build URL in your application
+        console.log("Latest build URL: " + latestBuildUrl);
+      }
+    };
+    xhr.send();
+  }
+
+  window.onload = function() {
+    getLatestBuildUrl();
+  };
+
+</script>
+
+
 <script>
 
   async function getAccessToken() {
