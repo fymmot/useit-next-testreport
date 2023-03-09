@@ -280,7 +280,7 @@ flex-direction: column;
     return data.token
   }
 
-  console.log("acesstoken", await getAccessToken())
+  console.log(`accessToken: ${await getAccessToken()}`)
 
 
   async function getWorkflows(repoOwner, repoName) {
@@ -318,6 +318,7 @@ flex-direction: column;
 
     const res = await fetch(`https://api.github.com/repos/fymmot/useit-next/actions/workflows/${workflowName}/runs`, { headers });
     const data = await res.json();
+    console.log(data.workflow_runs)
     return data.workflow_runs[0].id;
   };
 
