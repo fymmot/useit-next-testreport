@@ -9,6 +9,7 @@
 		body {
 			background-color: #ffffff;
 			color: #333333;
+			display: flex;
 			font-family:
 				"Segoe UI",
 				Roboto,
@@ -25,7 +26,7 @@
 
 		main {
 			margin: 0 auto;
-			max-width: 1000px;
+			min-width: 1000px;
 			padding: 1.25rem;
 			text-align: center;
 		}
@@ -157,7 +158,8 @@
 			border-radius: 0;
 			box-shadow: 0.1rem 0.25rem 0.5rem rgba(0 0 0 / 15%);
 			display: grid;
-			grid-template-columns: 1.5fr 1fr;
+			gap: 0.5rem;
+			grid-template-columns: 1.5fr auto;
 			margin: 0;
 			margin-bottom: 1.5rem;
 			padding: 0.25rem 0.5rem;
@@ -200,26 +202,26 @@
 <body>
 	<main>
 		<h1>Pa11y CI Accessibility Report Summary</h1>
-		<h2>Generated at: Mon Jun 12 2023 15:19:49 GMT+0000 (Coordinated Universal Time)</h2>
+		<h2>Generated at: Mon Jun 12 2023 15:21:54 GMT+0000 (Coordinated Universal Time)</h2>
 		<h2>Summary: 66 pages (66 passed / 0
 			failed), 0 accessibility issues</h2>
 		<div class="filter">
 			<span class="label">Filter page results: </span>
-			<span class="count error button" id="pa11y-issues" title="Pa11y analyzed page and found issues">
+			<span class="count error button" id="pa11y-issues" tabindex="0" role="button" aria-label="Toggle pages with issues" title="Pa11y analyzed page and found issues">
 				<span class="left-bar" aria-hidden="true"></span>
 				<span class="body">Pa11y Issues</span>
 			</span>
-			<span class="count button" id="no-issues" title="Pa11y analyzed page and found no issues">
+			<span class="count button" id="no-issues" tabindex="0" role="button" aria-label="Toggle pages with no issues" title="Pa11y analyzed page and found no issues">
 				<span class="left-bar" aria-hidden="true"></span>
 				<span class="body">No Issues</span>
 			</span>
-			<span class="count failure button" id="page-errors" title="Pa11y failed to analyze page">
+			<span class="count failure button" id="page-errors" tabindex="0" role="button" aria-label="Toggle page errors" title="Pa11y failed to analyze page">
 				<span class="left-bar" aria-hidden="true"></span>
 				<span class="body">Page Errors</span>
 			</span>
 		</div>
 		<ul class="pages">
-<li class="page"><a class="page-link" href="useit-no.html" title="https://useit.no/">https://useit.no/</a><p class="counts">
+<li class="page"><a class="page-link" href="useit-se.html">https://useit.se/</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -233,7 +235,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-om-useit.html" title="https://useit.no/om-useit">https://useit.no/om-useit</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-om-useit.html">https://useit.se/om-useit</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -247,7 +249,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-kontakt-oss.html" title="https://useit.no/kontakt-oss">https://useit.no/kontakt-oss</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-kontakta-oss.html">https://useit.se/kontakta-oss</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -261,7 +263,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-nyhetsbrev.html" title="https://useit.no/nyhetsbrev">https://useit.no/nyhetsbrev</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-nyhetsbrev.html">https://useit.se/nyhetsbrev</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -275,7 +277,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt.html" title="https://useit.no/aktuelt">https://useit.no/aktuelt</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt.html">https://useit.se/aktuellt</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -289,7 +291,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-vi-tilbyr.html" title="https://useit.no/vi-tilbyr">https://useit.no/vi-tilbyr</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder.html">https://useit.se/vi-erbjuder</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -303,7 +305,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-vi-tilbyr-strategisk-arbeid.html" title="https://useit.no/vi-tilbyr/strategisk-arbeid">https://useit.no/vi-tilbyr/strategisk-arbeid</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-contact.html">https://useit.se/en/contact</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -317,7 +319,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-vi-tilbyr-analyser-opplaering-og-support-innen-universell-utforming.html" title="https://useit.no/vi-tilbyr/analyser-opplaering-og-support-innen-universell-utforming">https://useit.no/vi-tilbyr/analyser-opplaering-og-support-innen-universell-utforming</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-about.html">https://useit.se/en/about</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -331,7 +333,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-vi-tilbyr-lopende-stotte-i-universell-utforming.html" title="https://useit.no/vi-tilbyr/lopende-stotte-i-universell-utforming">https://useit.no/vi-tilbyr/lopende-stotte-i-universell-utforming</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en.html">https://useit.se/en</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -345,7 +347,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-god-fargekontrast-er-viktig-for-folk-med-synsvariasjoner.html" title="https://useit.no/aktuelt/god-fargekontrast-er-viktig-for-folk-med-synsvariasjoner">https://useit.no/aktuelt/god-fargekontrast-er-viktig-for-folk-med-synsvariasjoner</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-posts.html">https://useit.se/en/posts</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -359,7 +361,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-vil-universell-utforming-begrense-designet-pa-nettsiden.html" title="https://useit.no/aktuelt/vil-universell-utforming-begrense-designet-pa-nettsiden">https://useit.no/aktuelt/vil-universell-utforming-begrense-designet-pa-nettsiden</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-services.html">https://useit.se/en/services</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -373,7 +375,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-god-universell-utforming-handler-om-mer-enn-regelverk.html" title="https://useit.no/aktuelt/god-universell-utforming-handler-om-mer-enn-regelverk">https://useit.no/aktuelt/god-universell-utforming-handler-om-mer-enn-regelverk</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-analyser-utbildningar-och-tillgaenglighetsredogoerelse.html">https://useit.se/vi-erbjuder/analyser-utbildningar-och-tillgaenglighetsredogoerelse</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -387,7 +389,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-mot-useit-i-oktober.html" title="https://useit.no/aktuelt/mot-useit-i-oktober">https://useit.no/aktuelt/mot-useit-i-oktober</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-aceit.html">https://useit.se/vi-erbjuder/aceit</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -401,7 +403,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-har-kommunene-forutsetninger-til-a-mote-lovkravene-til-universell-utforming.html" title="https://useit.no/aktuelt/har-kommunene-forutsetninger-til-a-mote-lovkravene-til-universell-utforming">https://useit.no/aktuelt/har-kommunene-forutsetninger-til-a-mote-lovkravene-til-universell-utforming</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-naetverk-inom-tillgaenglighet.html">https://useit.se/vi-erbjuder/naetverk-inom-tillgaenglighet</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -415,7 +417,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-bra-nok-med-automatiske-tester.html" title="https://useit.no/aktuelt/bra-nok-med-automatiske-tester">https://useit.no/aktuelt/bra-nok-med-automatiske-tester</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-strategiskt-arbete.html">https://useit.se/vi-erbjuder/strategiskt-arbete</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -429,7 +431,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-digitalt-utenforskap-er-et-stort-samfunnsproblem.html" title="https://useit.no/aktuelt/digitalt-utenforskap-er-et-stort-samfunnsproblem">https://useit.no/aktuelt/digitalt-utenforskap-er-et-stort-samfunnsproblem</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-services-accessibility-strategy.html">https://useit.se/en/services/accessibility-strategy</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -443,7 +445,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-hvordan-utviklere-kan-lage-tilgjengelige-nettsteder-med-wai-aria.html" title="https://useit.no/aktuelt/hvordan-utviklere-kan-lage-tilgjengelige-nettsteder-med-wai-aria">https://useit.no/aktuelt/hvordan-utviklere-kan-lage-tilgjengelige-nettsteder-med-wai-aria</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-services-accessibility-consultants.html">https://useit.se/en/services/accessibility-consultants</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -457,7 +459,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-offentlig-sektor-skal-na-rapportere-uu-status-arlig.html" title="https://useit.no/aktuelt/offentlig-sektor-skal-na-rapportere-uu-status-arlig">https://useit.no/aktuelt/offentlig-sektor-skal-na-rapportere-uu-status-arlig</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-tillgaenglighetskonsulter.html">https://useit.se/vi-erbjuder/tillgaenglighetskonsulter</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -471,7 +473,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-gjor-ditt-nettsted-mer-tilgjengelig-med-personlig-tilpasning.html" title="https://useit.no/aktuelt/gjor-ditt-nettsted-mer-tilgjengelig-med-personlig-tilpasning">https://useit.no/aktuelt/gjor-ditt-nettsted-mer-tilgjengelig-med-personlig-tilpasning</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-services-audits-training-and-accessibility-statements.html">https://useit.se/en/services/audits-training-and-accessibility-statements</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -485,7 +487,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-e-handel-ma-mote-krav-til-universell-utforming-for-a-kunne-brukes-av-alle.html" title="https://useit.no/aktuelt/e-handel-ma-mote-krav-til-universell-utforming-for-a-kunne-brukes-av-alle">https://useit.no/aktuelt/e-handel-ma-mote-krav-til-universell-utforming-for-a-kunne-brukes-av-alle</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-kurs-19-april-skapa-tillgaengliga-dokument-i-word.html">https://useit.se/aktuellt/kurs-19-april-skapa-tillgaengliga-dokument-i-word</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -499,7 +501,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-la-brukerne-hjelpe-deg-til-a-bli-a-bli-bedre-pa-universell-utforming.html" title="https://useit.no/aktuelt/la-brukerne-hjelpe-deg-til-a-bli-a-bli-bedre-pa-universell-utforming">https://useit.no/aktuelt/la-brukerne-hjelpe-deg-til-a-bli-a-bli-bedre-pa-universell-utforming</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-goer-din-webbplats-mer-tillgaenglig-med-personalisering.html">https://useit.se/aktuellt/goer-din-webbplats-mer-tillgaenglig-med-personalisering</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -513,7 +515,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se.html" title="https://useit.se/">https://useit.se/</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-kostnadsfri-fragestund-om-tillgaenglighet.html">https://useit.se/aktuellt/kostnadsfri-fragestund-om-tillgaenglighet</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -527,7 +529,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-om-useit.html" title="https://useit.se/om-useit">https://useit.se/om-useit</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-webbinarium-16-juni-tillgaenglighet-pa-webben.html">https://useit.se/aktuellt/webbinarium-16-juni-tillgaenglighet-pa-webben</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -541,7 +543,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-kontakta-oss.html" title="https://useit.se/kontakta-oss">https://useit.se/kontakta-oss</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-kurser-i-digital-tillgaenglighet.html">https://useit.se/aktuellt/kurser-i-digital-tillgaenglighet</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -555,7 +557,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-nyhetsbrev.html" title="https://useit.se/nyhetsbrev">https://useit.se/nyhetsbrev</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-vaelkommen-till-ett-seminarium-om-digital-tillgaenglighet.html">https://useit.se/aktuellt/vaelkommen-till-ett-seminarium-om-digital-tillgaenglighet</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -569,7 +571,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt.html" title="https://useit.se/aktuellt">https://useit.se/aktuellt</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-fa-gratis-radgivning-om-tillgaenglighet-uppfyll-kommande-lagkrav-foer-din-e-handel.html">https://useit.se/aktuellt/fa-gratis-radgivning-om-tillgaenglighet-uppfyll-kommande-lagkrav-foer-din-e-handel</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -583,7 +585,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder.html" title="https://useit.se/vi-erbjuder">https://useit.se/vi-erbjuder</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-aceit-testplattform-foer-digital-tillgaenglighet.html">https://useit.se/aktuellt/aceit-testplattform-foer-digital-tillgaenglighet</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -597,7 +599,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-contact.html" title="https://useit.se/en/contact">https://useit.se/en/contact</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-webbinarium-29-mars-ta-kontroll-oever-dokumentdjungeln.html">https://useit.se/aktuellt/webbinarium-29-mars-ta-kontroll-oever-dokumentdjungeln</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -611,7 +613,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-about.html" title="https://useit.se/en/about">https://useit.se/en/about</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-posts-our-new-website-is-launched.html">https://useit.se/en/posts/our-new-website-is-launched</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -625,7 +627,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en.html" title="https://useit.se/en">https://useit.se/en</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-webbinarium-dags-att-hoegprioritera-tillgaenglighet.html">https://useit.se/aktuellt/webbinarium-dags-att-hoegprioritera-tillgaenglighet</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -639,7 +641,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-posts.html" title="https://useit.se/en/posts">https://useit.se/en/posts</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-fragor-och-svar-om-dos-lagen.html">https://useit.se/aktuellt/fragor-och-svar-om-dos-lagen</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -653,7 +655,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-services.html" title="https://useit.se/en/services">https://useit.se/en/services</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-foerelaesning-10-november-foer-kommunerna-i-naetverket-digidig.html">https://useit.se/aktuellt/foerelaesning-10-november-foer-kommunerna-i-naetverket-digidig</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -667,7 +669,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-analyser-utbildningar-och-tillgaenglighetsredogoerelse.html" title="https://useit.se/vi-erbjuder/analyser-utbildningar-och-tillgaenglighetsredogoerelse">https://useit.se/vi-erbjuder/analyser-utbildningar-och-tillgaenglighetsredogoerelse</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-webbinarium-granska-dina-digitala-graenssnitt-med-nya-aceit.html">https://useit.se/aktuellt/webbinarium-granska-dina-digitala-graenssnitt-med-nya-aceit</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -681,7 +683,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-aceit.html" title="https://useit.se/vi-erbjuder/aceit">https://useit.se/vi-erbjuder/aceit</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-posts-games-for-human-beings-why-game-accessibility-is-important.html">https://useit.se/en/posts/games-for-human-beings-why-game-accessibility-is-important</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -695,7 +697,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-naetverk-inom-tillgaenglighet.html" title="https://useit.se/vi-erbjuder/naetverk-inom-tillgaenglighet">https://useit.se/vi-erbjuder/naetverk-inom-tillgaenglighet</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-nu-slaepper-vi-nya-useit-se.html">https://useit.se/aktuellt/nu-slaepper-vi-nya-useit-se</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -709,7 +711,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-strategiskt-arbete.html" title="https://useit.se/vi-erbjuder/strategiskt-arbete">https://useit.se/vi-erbjuder/strategiskt-arbete</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-vi-tillgaenglighetssaekrar-era-dokument.html">https://useit.se/aktuellt/vi-tillgaenglighetssaekrar-era-dokument</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -723,7 +725,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-services-accessibility-strategy.html" title="https://useit.se/en/services/accessibility-strategy">https://useit.se/en/services/accessibility-strategy</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-tillgaenglighetsdirektivet.html">https://useit.se/aktuellt/tillgaenglighetsdirektivet</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -737,7 +739,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-services-accessibility-consultants.html" title="https://useit.se/en/services/accessibility-consultants">https://useit.se/en/services/accessibility-consultants</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-foersta-vitet-efter-att-dos-lagen-traedde-i-kraft.html">https://useit.se/aktuellt/foersta-vitet-efter-att-dos-lagen-traedde-i-kraft</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -751,7 +753,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-vi-erbjuder-tillgaenglighetskonsulter.html" title="https://useit.se/vi-erbjuder/tillgaenglighetskonsulter">https://useit.se/vi-erbjuder/tillgaenglighetskonsulter</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-sl-riskerar-vite-pa-700-000-kronor-foer-bristande-tillgaenglighet.html">https://useit.se/aktuellt/sl-riskerar-vite-pa-700-000-kronor-foer-bristande-tillgaenglighet</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -765,7 +767,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-services-audits-training-and-accessibility-statements.html" title="https://useit.se/en/services/audits-training-and-accessibility-statements">https://useit.se/en/services/audits-training-and-accessibility-statements</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-raecker-det-med-automatiska-tester.html">https://useit.se/aktuellt/raecker-det-med-automatiska-tester</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -779,7 +781,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-kurs-19-april-skapa-tillgaengliga-dokument-i-word.html" title="https://useit.se/aktuellt/kurs-19-april-skapa-tillgaengliga-dokument-i-word">https://useit.se/aktuellt/kurs-19-april-skapa-tillgaengliga-dokument-i-word</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-kostnadsfri-fragestund-om-digital-tillgaenglighet.html">https://useit.se/aktuellt/kostnadsfri-fragestund-om-digital-tillgaenglighet</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -793,7 +795,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-goer-din-webbplats-mer-tillgaenglig-med-personalisering.html" title="https://useit.se/aktuellt/goer-din-webbplats-mer-tillgaenglig-med-personalisering">https://useit.se/aktuellt/goer-din-webbplats-mer-tillgaenglig-med-personalisering</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-en-posts-make-your-website-more-accessible-with-personalization.html">https://useit.se/en/posts/make-your-website-more-accessible-with-personalization</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -807,7 +809,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-kostnadsfri-fragestund-om-tillgaenglighet.html" title="https://useit.se/aktuellt/kostnadsfri-fragestund-om-tillgaenglighet">https://useit.se/aktuellt/kostnadsfri-fragestund-om-tillgaenglighet</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-sommarkampanj-vi-granskar-din-webbplats.html">https://useit.se/aktuellt/sommarkampanj-vi-granskar-din-webbplats</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -821,7 +823,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-webbinarium-16-juni-tillgaenglighet-pa-webben.html" title="https://useit.se/aktuellt/webbinarium-16-juni-tillgaenglighet-pa-webben">https://useit.se/aktuellt/webbinarium-16-juni-tillgaenglighet-pa-webben</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-har-du-koll-pa-din-tillgaenglighetsredogoerelse.html">https://useit.se/aktuellt/har-du-koll-pa-din-tillgaenglighetsredogoerelse</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -835,7 +837,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-kurser-i-digital-tillgaenglighet.html" title="https://useit.se/aktuellt/kurser-i-digital-tillgaenglighet">https://useit.se/aktuellt/kurser-i-digital-tillgaenglighet</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-prenumerera-pa-vart-nyhetsbrev.html">https://useit.se/aktuellt/prenumerera-pa-vart-nyhetsbrev</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -849,7 +851,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-vaelkommen-till-ett-seminarium-om-digital-tillgaenglighet.html" title="https://useit.se/aktuellt/vaelkommen-till-ett-seminarium-om-digital-tillgaenglighet">https://useit.se/aktuellt/vaelkommen-till-ett-seminarium-om-digital-tillgaenglighet</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no.html">https://useit.no/</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -863,7 +865,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-fa-gratis-radgivning-om-tillgaenglighet-uppfyll-kommande-lagkrav-foer-din-e-handel.html" title="https://useit.se/aktuellt/fa-gratis-radgivning-om-tillgaenglighet-uppfyll-kommande-lagkrav-foer-din-e-handel">https://useit.se/aktuellt/fa-gratis-radgivning-om-tillgaenglighet-uppfyll-kommande-lagkrav-foer-din-e-handel</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-om-useit.html">https://useit.no/om-useit</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -877,7 +879,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-aceit-testplattform-foer-digital-tillgaenglighet.html" title="https://useit.se/aktuellt/aceit-testplattform-foer-digital-tillgaenglighet">https://useit.se/aktuellt/aceit-testplattform-foer-digital-tillgaenglighet</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-kontakt-oss.html">https://useit.no/kontakt-oss</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -891,7 +893,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-webbinarium-29-mars-ta-kontroll-oever-dokumentdjungeln.html" title="https://useit.se/aktuellt/webbinarium-29-mars-ta-kontroll-oever-dokumentdjungeln">https://useit.se/aktuellt/webbinarium-29-mars-ta-kontroll-oever-dokumentdjungeln</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-nyhetsbrev.html">https://useit.no/nyhetsbrev</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -905,7 +907,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-posts-our-new-website-is-launched.html" title="https://useit.se/en/posts/our-new-website-is-launched">https://useit.se/en/posts/our-new-website-is-launched</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt.html">https://useit.no/aktuelt</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -919,7 +921,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-webbinarium-dags-att-hoegprioritera-tillgaenglighet.html" title="https://useit.se/aktuellt/webbinarium-dags-att-hoegprioritera-tillgaenglighet">https://useit.se/aktuellt/webbinarium-dags-att-hoegprioritera-tillgaenglighet</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-vi-tilbyr.html">https://useit.no/vi-tilbyr</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -933,7 +935,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-fragor-och-svar-om-dos-lagen.html" title="https://useit.se/aktuellt/fragor-och-svar-om-dos-lagen">https://useit.se/aktuellt/fragor-och-svar-om-dos-lagen</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-vi-tilbyr-strategisk-arbeid.html">https://useit.no/vi-tilbyr/strategisk-arbeid</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -947,7 +949,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-foerelaesning-10-november-foer-kommunerna-i-naetverket-digidig.html" title="https://useit.se/aktuellt/foerelaesning-10-november-foer-kommunerna-i-naetverket-digidig">https://useit.se/aktuellt/foerelaesning-10-november-foer-kommunerna-i-naetverket-digidig</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-vi-tilbyr-analyser-opplaering-og-support-innen-universell-utforming.html">https://useit.no/vi-tilbyr/analyser-opplaering-og-support-innen-universell-utforming</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -961,7 +963,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-webbinarium-granska-dina-digitala-graenssnitt-med-nya-aceit.html" title="https://useit.se/aktuellt/webbinarium-granska-dina-digitala-graenssnitt-med-nya-aceit">https://useit.se/aktuellt/webbinarium-granska-dina-digitala-graenssnitt-med-nya-aceit</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-vi-tilbyr-lopende-stotte-i-universell-utforming.html">https://useit.no/vi-tilbyr/lopende-stotte-i-universell-utforming</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -975,7 +977,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-posts-games-for-human-beings-why-game-accessibility-is-important.html" title="https://useit.se/en/posts/games-for-human-beings-why-game-accessibility-is-important">https://useit.se/en/posts/games-for-human-beings-why-game-accessibility-is-important</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-god-fargekontrast-er-viktig-for-folk-med-synsvariasjoner.html">https://useit.no/aktuelt/god-fargekontrast-er-viktig-for-folk-med-synsvariasjoner</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -989,7 +991,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-nu-slaepper-vi-nya-useit-se.html" title="https://useit.se/aktuellt/nu-slaepper-vi-nya-useit-se">https://useit.se/aktuellt/nu-slaepper-vi-nya-useit-se</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-vil-universell-utforming-begrense-designet-pa-nettsiden.html">https://useit.no/aktuelt/vil-universell-utforming-begrense-designet-pa-nettsiden</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1003,7 +1005,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-vi-tillgaenglighetssaekrar-era-dokument.html" title="https://useit.se/aktuellt/vi-tillgaenglighetssaekrar-era-dokument">https://useit.se/aktuellt/vi-tillgaenglighetssaekrar-era-dokument</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-god-universell-utforming-handler-om-mer-enn-regelverk.html">https://useit.no/aktuelt/god-universell-utforming-handler-om-mer-enn-regelverk</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1017,7 +1019,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-tillgaenglighetsdirektivet.html" title="https://useit.se/aktuellt/tillgaenglighetsdirektivet">https://useit.se/aktuellt/tillgaenglighetsdirektivet</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-mot-useit-i-oktober.html">https://useit.no/aktuelt/mot-useit-i-oktober</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1031,7 +1033,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-foersta-vitet-efter-att-dos-lagen-traedde-i-kraft.html" title="https://useit.se/aktuellt/foersta-vitet-efter-att-dos-lagen-traedde-i-kraft">https://useit.se/aktuellt/foersta-vitet-efter-att-dos-lagen-traedde-i-kraft</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-har-kommunene-forutsetninger-til-a-mote-lovkravene-til-universell-utforming.html">https://useit.no/aktuelt/har-kommunene-forutsetninger-til-a-mote-lovkravene-til-universell-utforming</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1045,7 +1047,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-sl-riskerar-vite-pa-700-000-kronor-foer-bristande-tillgaenglighet.html" title="https://useit.se/aktuellt/sl-riskerar-vite-pa-700-000-kronor-foer-bristande-tillgaenglighet">https://useit.se/aktuellt/sl-riskerar-vite-pa-700-000-kronor-foer-bristande-tillgaenglighet</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-bra-nok-med-automatiske-tester.html">https://useit.no/aktuelt/bra-nok-med-automatiske-tester</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1059,7 +1061,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-raecker-det-med-automatiska-tester.html" title="https://useit.se/aktuellt/raecker-det-med-automatiska-tester">https://useit.se/aktuellt/raecker-det-med-automatiska-tester</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-digitalt-utenforskap-er-et-stort-samfunnsproblem.html">https://useit.no/aktuelt/digitalt-utenforskap-er-et-stort-samfunnsproblem</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1073,7 +1075,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-kostnadsfri-fragestund-om-digital-tillgaenglighet.html" title="https://useit.se/aktuellt/kostnadsfri-fragestund-om-digital-tillgaenglighet">https://useit.se/aktuellt/kostnadsfri-fragestund-om-digital-tillgaenglighet</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-hvordan-utviklere-kan-lage-tilgjengelige-nettsteder-med-wai-aria.html">https://useit.no/aktuelt/hvordan-utviklere-kan-lage-tilgjengelige-nettsteder-med-wai-aria</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1087,7 +1089,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-en-posts-make-your-website-more-accessible-with-personalization.html" title="https://useit.se/en/posts/make-your-website-more-accessible-with-personalization">https://useit.se/en/posts/make-your-website-more-accessible-with-personalization</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-offentlig-sektor-skal-na-rapportere-uu-status-arlig.html">https://useit.no/aktuelt/offentlig-sektor-skal-na-rapportere-uu-status-arlig</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1101,7 +1103,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-sommarkampanj-vi-granskar-din-webbplats.html" title="https://useit.se/aktuellt/sommarkampanj-vi-granskar-din-webbplats">https://useit.se/aktuellt/sommarkampanj-vi-granskar-din-webbplats</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-gjor-ditt-nettsted-mer-tilgjengelig-med-personlig-tilpasning.html">https://useit.no/aktuelt/gjor-ditt-nettsted-mer-tilgjengelig-med-personlig-tilpasning</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1115,7 +1117,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-har-du-koll-pa-din-tillgaenglighetsredogoerelse.html" title="https://useit.se/aktuellt/har-du-koll-pa-din-tillgaenglighetsredogoerelse">https://useit.se/aktuellt/har-du-koll-pa-din-tillgaenglighetsredogoerelse</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-e-handel-ma-mote-krav-til-universell-utforming-for-a-kunne-brukes-av-alle.html">https://useit.no/aktuelt/e-handel-ma-mote-krav-til-universell-utforming-for-a-kunne-brukes-av-alle</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1129,7 +1131,7 @@
 						<span class="body">0 notices</span>
 					</span>
 				</p>
-			</li><li class="page"><a class="page-link" href="useit-se-aktuellt-prenumerera-pa-vart-nyhetsbrev.html" title="https://useit.se/aktuellt/prenumerera-pa-vart-nyhetsbrev">https://useit.se/aktuellt/prenumerera-pa-vart-nyhetsbrev</a><p class="counts">
+			</li><li class="page"><a class="page-link" href="useit-no-aktuelt-la-brukerne-hjelpe-deg-til-a-bli-a-bli-bedre-pa-universell-utforming.html">https://useit.no/aktuelt/la-brukerne-hjelpe-deg-til-a-bli-a-bli-bedre-pa-universell-utforming</a><p class="counts">
 					<span class="count">
 						<span class="left-bar" aria-hidden="true"></span>
 						<span class="body">0 errors</span>
@@ -1154,9 +1156,17 @@
 			});
 		};
 
-		document.getElementById('pa11y-issues').addEventListener('click', () => togglePages('pa11y-issues', '.page.has-errors, .page.has-warnings, .page.has-notices'));
-		document.getElementById('page-errors').addEventListener('click', () => togglePages('page-errors', '.page.page-error'));
-		document.getElementById('no-issues').addEventListener('click', () => togglePages('no-issues', '.page:not(.has-errors, .has-warnings, .has-notices, .page-error)'));
+		const pa11yIssuesFilter = document.getElementById('pa11y-issues');
+		pa11yIssuesFilter.addEventListener('click', () => togglePages('pa11y-issues', '.page.has-errors, .page.has-warnings, .page.has-notices'));
+		pa11yIssuesFilter.addEventListener('keydown', (event) => event.key === "Enter" && togglePages('pa11y-issues', '.page.has-errors, .page.has-warnings, .page.has-notices'));
+
+		const pageErrorsFilter = document.getElementById('page-errors');
+		pageErrorsFilter.addEventListener('click', () => togglePages('page-errors', '.page.page-error'));
+		pageErrorsFilter.addEventListener('keydown', (event) => event.key === "Enter" && togglePages('page-errors', '.page.page-error'));
+
+		const noIssuesFilter = document.getElementById('no-issues');
+		noIssuesFilter.addEventListener('click', () => togglePages('no-issues', '.page:not(.has-errors, .has-warnings, .has-notices, .page-error)'));
+		noIssuesFilter.addEventListener('keydown', (event) => event.key === "Enter" && togglePages('no-issues', '.page:not(.has-errors, .has-warnings, .has-notices, .page-error)'));
 	</script>
 </body>
 
