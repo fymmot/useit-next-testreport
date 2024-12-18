@@ -1,375 +1,206 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Useit.se status</title>
-  <style>
-    :root {
-      --beige: #fbf3df;
-      --blue: #7ca7ba;
-      --green: #a9d9b3;
-      --darkblue: #276078;
-      --darkerblue: #0A4B67;
-      --lightblue: #cce4f4;
-      --yellow: #f0c868;
-      --red: #f7a7a4;
-      --darkred: #be4350;
-      --success: #0070f3;
-      --cyan: #79FFE1;
-      --grey: #efefef;
-      --white: #fff;
-    }
-
-    :root {
-      --text-color: #111;
-      --bg-color: #fefefe;
-      --accent-color: var(--beige);
-      --button-color: var(--darkred);
-      --bg-alt: var(--light-blue);
-      --bg-grey: var(--grey);
-      --border-color: #999;
-      --blue-color: var(--blue);
-      --light-blue: var(--light-blue);
-      --focus-color: var(--darkerblue);
-    }
-
-    @media screen and (prefers-color-scheme: dark) {
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Useit.se status</title>
+    <style>
       :root {
-        --text-color: #fff;
-        --bg-color: #0e1220;
-        --accent-color: #171f2e;
-        --button-color: #be4350;
-        --bg-alt: #171f2e;
-        --bg-grey: #efefef;
-        --border-color: #666;
-        --blue-color: #171f2e;
-        --light-blue: #171f2e;
-        --focus-color: #fff;
+        --beige: #fbf3df;
+        --blue: #7ca7ba;
+        --green: #a9d9b3;
+        --darkblue: #276078;
+        --darkerblue: #0a4b67;
+        --lightblue: #cce4f4;
+        --yellow: #f0c868;
+        --red: #f7a7a4;
+        --darkred: #be4350;
+        --success: #0070f3;
+        --cyan: #79ffe1;
+        --grey: #efefef;
+        --white: #fff;
       }
-    }
 
-    body {
-      background-color: var(--blue-color);
-      color: var(--text-color);
-      font-family:
-              "Segoe UI",
-              Roboto,
-              "Noto Sans",
-              Ubuntu,
-              Cantarell,
-              "Helvetica Neue",
-              sans-serif;
-      font-size: 100%;
-      line-height: 1.3rem;
-      margin: 0;
-      padding: 0;
-    }
+      :root {
+        --text-color: #111;
+        --bg-color: #fefefe;
+        --accent-color: var(--beige);
+        --button-color: var(--darkred);
+        --bg-alt: var(--light-blue);
+        --bg-grey: var(--grey);
+        --border-color: #999;
+        --blue-color: var(--blue);
+        --light-blue: var(--light-blue);
+        --focus-color: var(--darkerblue);
+      }
 
-    body *:focus {
-      outline: 4px solid var(--focus-color);
-    }
+      @media screen and (prefers-color-scheme: dark) {
+        :root {
+          --text-color: #fff;
+          --bg-color: #0e1220;
+          --accent-color: #171f2e;
+          --button-color: #be4350;
+          --bg-alt: #171f2e;
+          --bg-grey: #efefef;
+          --border-color: #666;
+          --blue-color: #171f2e;
+          --light-blue: #171f2e;
+          --focus-color: #fff;
+        }
+      }
 
-    main {
-      margin: 0 auto;
-      max-width: 1000px;
-      padding: 1.25rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
+      body {
+        background-color: var(--blue-color);
+        color: var(--text-color);
+        font-family: "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell,
+          "Helvetica Neue", sans-serif;
+        font-size: 100%;
+        line-height: 1.3rem;
+        margin: 0;
+        padding: 0;
+      }
 
-    h1 {
-      font-size: 2.5rem;
-      line-height: 1.5rem;
-      margin: 0;
-      margin-bottom: 0.75rem;
-    }
+      body *:focus {
+        outline: 4px solid var(--focus-color);
+      }
 
-    h2 {
-      font-size: 1.15rem;
-      font-weight: normal;
-      margin: 0 0 0.75rem;
-    }
+      main {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 1.25rem;
+        text-align: center;
+        margin-top: 3rem;
+      }
 
-    p {
-      margin: 0;
-    }
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.5rem;
+        margin: 0;
+        margin-bottom: 0.75rem;
+      }
 
-    .button:hover {
-      cursor: pointer;
-    }
+      h2 {
+        font-size: 1.15rem;
+        font-weight: normal;
+        margin: 0 0 0.75rem;
+      }
 
-    .links {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
-      padding: 0;
-      flex-wrap: wrap;
-      row-gap: 3rem;
-    }
+      p {
+        margin: 0;
+      }
 
-    .links li {
-      list-style: none;
-      margin: 0;
-      flex-grow: 1;
+      .button:hover {
+        cursor: pointer;
+      }
 
-    }
-    .links a[href] {
-      display: flex;
-      height: 100%;
-      padding: 1rem 2rem;
-      justify-content: center;
-flex-direction: column;
+      .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        padding: 0;
+        flex-wrap: wrap;
+        row-gap: 3rem;
+      }
+
+      .links li {
+        list-style: none;
+        margin: 0;
+        flex-grow: 1;
+      }
+      .links a[href] {
+        display: flex;
+        height: 100%;
+        padding: 1rem 2rem;
+        justify-content: center;
+        flex-direction: column;
         align-items: center;
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 1.3rem;
-      font-weight: 700;
-      border-radius: 8px;
-      background-color: var(--bg-color);
-      position: relative;
-    }
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 700;
+        border-radius: 8px;
+        background-color: var(--bg-color);
+        position: relative;
+      }
 
-    .links a[href]:hover, .links a[href]:focus {
-      text-underline-offset: 0.2em;
-      text-decoration: underline;
-    }
+      .links a[href]:hover,
+      .links a[href]:focus {
+        text-underline-offset: 0.2em;
+        text-decoration: underline;
+      }
 
-    .e2e-link.success a, .a11y-link.success a, .percy-link.success a{
-      /*box-shadow: inset 0 0 0 8px var(--green);*/
-    }
+      .e2e-link.success a,
+      .a11y-link.success a,
+      .percy-link.success a {
+        /*box-shadow: inset 0 0 0 8px var(--green);*/
+      }
 
-    .e2e-link.failure a, .a11y-link.failure a, .percy-link.failure a{
-      /*box-shadow: inset 0 0 0 8px var(--red);*/
-      background-color: var(--red);
-      color: #000;
-    }
+      .e2e-link.failure a,
+      .a11y-link.failure a,
+      .percy-link.failure a {
+        /*box-shadow: inset 0 0 0 8px var(--red);*/
+        background-color: var(--red);
+        color: #000;
+      }
 
-    .e2e-link.success .result, .a11y-link.success .result, .percy-link.success .result, .e2e-link.failure .result, .a11y-link.failure .result, .percy-link.failure .result {
+      .e2e-link.success .result,
+      .a11y-link.success .result,
+      .percy-link.success .result,
+      .e2e-link.failure .result,
+      .a11y-link.failure .result,
+      .percy-link.failure .result {
         font-size: 1rem;
         font-weight: 400;
         opacity: 0.8;
         margin-top: 1rem;
-    }
+      }
 
-    .success-icon, .failure-icon {
+      .success-icon,
+      .failure-icon {
         width: 2.5rem;
         height: 2.5rem;
         display: none;
         margin-left: auto;
-      margin-right: auto;
+        margin-right: auto;
         margin-bottom: 1rem;
-    }
-    .success .success-icon {
-        display: block;
-      fill: var(--green);
-    }
-    .failure .failure-icon {
-      display: block;
-      fill: #000;
-    }
-
-  </style>
-</head>
-
-<body>
-<main>
-  <h1>Useit.se status</h1>
-  <ul class="links">
-    <li class="a11y-link">
-      <a href="a11y">
-        <svg class="success-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DoneIcon"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
-        <svg class="failure-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-        Pa11y accessibility tests
-        <div class="result"></div>
-      </a>
-    </li>
-    <li class="e2e-link">
-      <a href="e2e">
-        <svg class="success-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DoneIcon"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
-        <svg class="failure-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-        Playwright end-to-end tests
-        <div class="result"></div>
-      </a>
-    </li>
-    <li class="percy-link">
-      <a href="https://percy.io/dfbb2c55/useit-next">
-        <svg class="success-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DoneIcon"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
-        <svg class="failure-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseIcon"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-        Percy visual tests
-        <div class="result"></div>
-      </a>
-    </li>
-  </ul>
-
-
-
-</main>
-
-<script>
-  async function getPercyAccessToken() {
-    const response = await fetch("https://status.useit.se/.netlify/functions/get-percy-token")
-    const data = await response.json()
-    return data.token
-  }
-
-  async function getPercy() {
-
-    const accessToken = await getPercyAccessToken()
-    const headers = new Headers({
-      "Authorization": `Token ${accessToken}`,
-    });
-
-    const response = await fetch(
-            `https://percy.io/api/v1/projects/dfbb2c55/useit-next/builds?limit=1`,
-            {
-              headers,
-            }
-    );
-
-    if (!response.ok) {
-      console.error("Failed to retrieve Percy builds");
-      return;
-    }
-
-    const percyBuilds = await response.json();
-    console.log(percyBuilds)
-  }
-
-  getPercy()
-
-  /*async function getLatestBuildUrl() {
-    // Replace YOUR_API_TOKEN and YOUR_PROJECT_ID with your actual values
-    var apiEndpoint = "https://percy.io/api/v1/projects/dfbb2c55/useit-next/builds?limit=1";
-    const authToken = await getPercyAccessToken()
-
-    // Make a GET request to the Percy API
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", apiEndpoint);
-    xhr.setRequestHeader("Authorization", "Token " + authToken);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        // Parse the response JSON and get the URL of the latest build
-        var response = JSON.parse(xhr.responseText);
-        var latestBuildUrl = response[0]?.web_url;
-        console.log(response)
-
-        // Use the latest build URL in your application
-        console.log("Latest build URL: " + latestBuildUrl);
       }
-    };
-    xhr.send();
-  }
+      .success .success-icon {
+        display: block;
+        fill: var(--green);
+      }
+      .failure .failure-icon {
+        display: block;
+        fill: #000;
+      }
+    </style>
+  </head>
 
-  window.onload = function() {
-    getLatestBuildUrl();
-  };*/
-
-</script>
-
-
-<script>
-
-  async function getAccessToken() {
-    const response = await fetch("https://status.useit.se/.netlify/functions/get-github-token")
-    const data = await response.json()
-    return data.token
-  }
-
-  async function getWorkflows(repoOwner, repoName) {
-
-    const accessToken = await getAccessToken()
-    const headers = new Headers({
-      "Authorization": `Token ${accessToken}`,
-      "Accept": "application/vnd.github+json"
-    });
-
-    const response = await fetch(
-            `https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows`,
-            {
-              headers,
-            }
-    );
-
-    if (!response.ok) {
-      console.error("Failed to retrieve workflows");
-      return;
-    }
-
-    const workflows = await response.json();
-  }
-
-  getWorkflows("fymmot", "useit-next");
-
-  const getLastRun = async (workflowName) => {
-
-    const accessToken = await getAccessToken()
-    const headers = new Headers({
-      "Authorization": `Token ${accessToken}`,
-      "Accept": "application/vnd.github+json"
-    });
-
-    const res = await fetch(`https://api.github.com/repos/fymmot/useit-next/actions/workflows/${workflowName}/runs`, { headers });
-    const data = await res.json();
-    console.log(data.workflow_runs)
-    return data.workflow_runs[0].id;
-  };
-
-  const getRunStatus = async (runId) => {
-
-    const accessToken = await getAccessToken()
-    const headers = new Headers({
-      "Authorization": `Token ${accessToken}`,
-      "Accept": "application/vnd.github+json"
-    });
-
-    const res = await fetch(`https://api.github.com/repos/fymmot/useit-next/actions/runs/${runId}`, { headers });
-    const data = await res.json();
-    return { date: data.updated_at, status: data.conclusion };
-  };
-
-  const displayStatus = async (workflowName) => {
-    const runId = await getLastRun(workflowName);
-    const status = await getRunStatus(runId);
-    return status
-  };
-
-  let pa11yStatus = undefined;
-  let e2eStatus = undefined;
-
-  const getStatusString = (status, date) => {
-    const formattedDateTime = new Date(date).toLocaleString("sv-SE", {
-      dateStyle: "short",
-      timeStyle: "short",
-    });
-
-    if (status === "success") {
-      return `Last run: ${formattedDateTime} - Success`;
-    }
-    if (status === "failure") {
-      return `Last run: ${formattedDateTime} - Failure`;
-    }
-  };
-
-  displayStatus(43311163).then((status) => {
-    pa11yStatus = status.status;
-    const pa11yLink = document.getElementsByClassName("a11y-link")[0];
-    pa11yLink.classList.add(pa11yStatus);
-    pa11yLink.getElementsByClassName("result")[0].innerHTML = getStatusString(status.status, status.date);
-
-  });
-  displayStatus(47259483).then((status) => {
-    e2eStatus = status.status;
-    const e2eLink = document.getElementsByClassName("e2e-link")[0];
-    e2eLink.classList.add(e2eStatus);
-    e2eLink.getElementsByClassName("result")[0].innerHTML = getStatusString(status.status, status.date);
-  });
-
-</script>
-</body>
-
+  <body>
+    <main>
+      <h1>Useit.se status</h1>
+      <ul class="links">
+        <li class="a11y-link">
+          <a href="a11y">
+            Pa11y accessibility tests
+            <div class="result"></div>
+          </a>
+        </li>
+        <li class="e2e-link">
+          <a href="e2e">
+            Playwright end-to-end tests
+            <div class="result"></div>
+          </a>
+        </li>
+        <li class="percy-link">
+          <a href="https://percy.io/dfbb2c55/useit-next">
+            Percy visual tests
+            <div class="result"></div>
+          </a>
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>
