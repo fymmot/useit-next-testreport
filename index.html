@@ -2,8 +2,8 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Useit.se status</title>
     <style>
       :root {
@@ -53,8 +53,7 @@
       body {
         background-color: var(--blue-color);
         color: var(--text-color);
-        font-family: "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell,
-          "Helvetica Neue", sans-serif;
+        font-family: "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
         font-size: 100%;
         line-height: 1.3rem;
         margin: 0;
@@ -76,8 +75,7 @@
       h1 {
         font-size: 2.5rem;
         line-height: 1.5rem;
-        margin: 0;
-        margin-bottom: 0.75rem;
+        margin: 0 0 0.75rem;
       }
 
       h2 {
@@ -126,40 +124,40 @@
         position: relative;
       }
 
-      .links a[href]:hover,
-      .links a[href]:focus {
+      .links a[href]:focus,
+      .links a[href]:hover {
         text-underline-offset: 0.2em;
         text-decoration: underline;
       }
 
-      .e2e-link.success a,
       .a11y-link.success a,
+      .e2e-link.success a,
       .percy-link.success a {
         /*box-shadow: inset 0 0 0 8px var(--green);*/
       }
 
-      .e2e-link.failure a,
       .a11y-link.failure a,
+      .e2e-link.failure a,
       .percy-link.failure a {
         /*box-shadow: inset 0 0 0 8px var(--red);*/
         background-color: var(--red);
         color: #000;
       }
 
-      .e2e-link.success .result,
-      .a11y-link.success .result,
-      .percy-link.success .result,
-      .e2e-link.failure .result,
       .a11y-link.failure .result,
-      .percy-link.failure .result {
+      .a11y-link.success .result,
+      .e2e-link.failure .result,
+      .e2e-link.success .result,
+      .percy-link.failure .result,
+      .percy-link.success .result {
         font-size: 1rem;
         font-weight: 400;
         opacity: 0.8;
         margin-top: 1rem;
       }
 
-      .success-icon,
-      .failure-icon {
+      .failure-icon,
+      .success-icon {
         width: 2.5rem;
         height: 2.5rem;
         display: none;
@@ -185,18 +183,6 @@
         <li class="a11y-link">
           <a href="a11y">
             Pa11y accessibility tests
-            <div class="result"></div>
-          </a>
-        </li>
-        <li class="e2e-link">
-          <a href="e2e">
-            Playwright end-to-end tests
-            <div class="result"></div>
-          </a>
-        </li>
-        <li class="percy-link">
-          <a href="https://percy.io/dfbb2c55/useit-next">
-            Percy visual tests
             <div class="result"></div>
           </a>
         </li>
