@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Anpassa din resa</title>
+</head>
+<body>
+<nav>
+    <button type="button" onclick="location.href='timetable.html';">Gå tillbaka till välj utresa</button>
+</nav>
+    <h1>Anpassa din resa</h1>
+    <h2>Stockholm Central–Göteborg C</h2>
+    <p>Söndag 31 juli kl 14:32 - 18:35</p>
+    <p>1 vuxen, reser med ledar- eller assistanshund</p>
+    <p>Körs med SJ Snabbtåg, Tåg 1337, Har Bistro och Wi-Fi</p>
+    <button>Resedetaljer</button>
+    <h2 id="reseklass">Reseklass</h2>
+    <div role="group" aria-labelledby="reseklass" id="reseklass-group">
+        <button id="2class">2 klass, från 365 SEK</button>
+        <ul aria-label="Ingår i 2 klass">
+            <li>Wi-Fi</li>
+            <li>Platsbokning</li>
+        </ul>
+        <button>2 klass lugn, från 445 SEK</button>
+        <ul aria-label="Ingår i 2 klass lugn">
+            <li>Låg samtalsvolym</li>
+            <li>Mobiler på ljudlöst</li>
+            <li>Liten frukost på avgångar före 9</li>
+            <li>Kaffe och te</li>
+            <li>Wi-Fi</li>
+            <li>Platsbokning</li>
+        </ul>
+        <button>1 klass, från 515 SEK</button>
+        <ul aria-label="Ingår i 1 klass">
+            <li>Extra benutrymme och breda säten</li>
+            <li>Möjlighet att boka singelsäte</li>
+            <li>Tillgång till SJ Lounge</li>
+            <li>Frukost på avgångar före 9</li>
+            <li>Kaffe, te och fika</li>
+            <li>Wi-Fi</li>
+            <li>Platsbokning</li>
+        </ul>
+        <button>Läs mer om våra komfortklasser</button>
+    </div>
+    <button id="classSelectedButton" aria-expanded="false" hidden>2 klass valt, från 365 SEK, tryck för att ändra</button>
+    <h2 id="flex">Flexibilitet</h2>
+    <div role="group" aria-labelledby="flex" id="flex-group">
+        <button id="nonrebookable">Kan ej ombokas, 365 SEK</button>
+        <button>Kan ombokas, 445 SEK</button>
+        <button>Kan återbetalas, 745 SEK</button>
+        <button>Läs mer om våra komfortklasser</button>
+    </div>
+    <button id="flexSelectedButton" aria-expanded="false" hidden>Kan ej ombokas valt, 365 SEK, tryck för att ändra</button>
+    <p id="summary" hidden>Att betala (utresa, en vuxen): 365 SEK</p>
+    <button id="continue" disabled onclick="location.href='yourtrip.html'">Fortsätt</button>
+<script defer>
+  const classGroup = document.getElementById("reseklass-group");
+  const classButton = document.getElementById("2class");
+  const classButtonSelected = document.getElementById("classSelectedButton");
+  classButton.addEventListener("click", ()=> {
+    classGroup.setAttribute("hidden", "hidden");
+    classButtonSelected.removeAttribute("hidden");
+    classButtonSelected.focus();
+  })
+
+  const flexGroup = document.getElementById("flex-group");
+  const flexButton = document.getElementById("nonrebookable");
+  const flexButtonSelected = document.getElementById("flexSelectedButton");
+  const summary = document.getElementById("summary");
+  const continueButton = document.getElementById("continue");
+
+
+  flexButton.addEventListener("click", ()=> {
+    flexGroup.setAttribute("hidden", "hidden");
+    flexButtonSelected.removeAttribute("hidden");
+    flexButtonSelected.focus();
+    summary.removeAttribute("hidden");
+    continueButton.removeAttribute("disabled");
+  })
+</script>
+</body>
+</html>

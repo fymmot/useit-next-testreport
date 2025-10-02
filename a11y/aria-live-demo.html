@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARIA Live Regions Demo</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        line-height: 1.6;
+      }
+      .demo-section {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 4px;
+      }
+      button {
+        background: #0066cc;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0.5rem 0;
+      }
+      button:hover {
+        background: #0052a3;
+      }
+      .alert-box {
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 4px;
+      }
+      .alert {
+        background: #ffebee;
+        border: 1px solid #ffcdd2;
+      }
+      .live-region {
+        min-height: 50px;
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+      }
+      .info {
+        background: #e3f2fd;
+        border: 1px solid #bbdefb;
+      }
+      .polite {
+        background: #e8f5e9;
+        border: 1px solid #c8e6c9;
+      }
+      .assertive {
+        background: #fff3e0;
+        border: 1px solid #ffe0b2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ARIA Live Regions Demo</h1>
+
+    <div class="demo-section">
+      <h2>1. role="alert" Example</h2>
+      <p>
+        Alerts are assertive by default and will interrupt the user immediately.
+      </p>
+      <button onclick="showAlert()">Show Alert</button>
+      <div
+        id="alertRegion"
+        role="alert"
+        class="alert-box alert"
+        style="display: none"
+      ></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>2. aria-live="polite" Example</h2>
+      <p>
+        Polite announcements wait for the user to finish their current task
+        before announcing.
+      </p>
+      <button onclick="showPoliteMessage()">Show Polite Message</button>
+      <div
+        id="politeRegion"
+        aria-live="polite"
+        class="live-region polite"
+      ></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>3. aria-live="assertive" Example</h2>
+      <p>
+        Assertive announcements interrupt the user immediately, similar to
+        alerts.
+      </p>
+      <button onclick="showAssertiveMessage()">Show Assertive Message</button>
+      <div
+        id="assertiveRegion"
+        aria-live="assertive"
+        class="live-region assertive"
+      ></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>4. aria-live="off" Example</h2>
+      <p>This region is turned off and won't announce changes.</p>
+      <button onclick="showOffMessage()">Show Message (Won't Announce)</button>
+      <div id="offRegion" aria-live="off" class="live-region"></div>
+    </div>
+
+    <script>
+      function showAlert() {
+        const alertRegion = document.getElementById("alertRegion");
+        alertRegion.style.display = "block";
+        alertRegion.textContent =
+          "This is an alert message! It will interrupt immediately.";
+        setTimeout(() => {
+          alertRegion.style.display = "none";
+        }, 5000);
+      }
+
+      function showPoliteMessage() {
+        const region = document.getElementById("politeRegion");
+        region.textContent =
+          "This is a polite message. It will wait for the user to finish their current task.";
+      }
+
+      function showAssertiveMessage() {
+        const region = document.getElementById("assertiveRegion");
+        region.textContent =
+          "This is an assertive message! It will interrupt immediately.";
+      }
+
+      function showOffMessage() {
+        const region = document.getElementById("offRegion");
+        region.textContent =
+          'This message won\'t be announced because aria-live is set to "off".';
+      }
+    </script>
+  </body>
+</html>

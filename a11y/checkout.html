@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Kassan</title>
+
+</head>
+<body>
+    <button type="button" onclick="location.href='yourtrip.html'">Gå tillbaka till Din resa</button>
+    <h1>Kassan</h1>
+    <p>Resedetaljer: Sthlm Central - Göteborg C. Totalpris 365 SEK. Avgångstid 31 juli 12:33, Ankomsttid 17:05. 1 vuxen med ledar-/assistanshund, 2 klass, Kan inte ombokas.  Vagn 1, Plats 39</p>
+    <button type="button">Lägg till värdebevis</button>
+    <h2 id="delivery">Hur vill du ha biljetten?</h2>
+    <fieldset aria-labelledby="delivery">
+        <label>
+            <input type="radio" name="delivery" checked/>
+            E-biljett
+        </label>
+        <label>
+            <input type="radio" name="delivery" />
+            SMS-biljett
+        </label>
+        <label>
+            <input type="radio" name="delivery" />
+            Hämta ut
+        </label>
+    </fieldset>
+    <h2 id="travellers">Vem ska resa?</h2>
+    <h3 id="traveller1">Vuxen 1 - Reser med ledar- eller assistanshund</h3>
+    <fieldset aria-labelledby="travellers traveller1">
+        <label>
+            Förnamn
+            <input type="text"/>
+        </label>
+        <label>
+            Efternamn
+            <input type="text"/>
+        </label>
+        <label>
+            E-postadress
+            <input type="text"/>
+        </label>
+        <label>
+            Mobilnummer
+            <input type="tel"/>
+        </label>
+    </fieldset>
+    <h2 id="payment">Betalsätt</h2>
+    <fieldset aria-labelledby="payment">
+        <label>
+            <input type="radio" name="payment" checked/>
+            Swish
+        </label>
+        <label>
+            <input type="radio" name="payment" />
+            Kontokort
+        </label>
+        <label>
+            <input type="radio" name="payment" />
+            Betalfaktura
+        </label>
+    </fieldset>
+<h2>Villkor</h2>
+<a href="ourterms.html">Våra köpvillkor</a>
+    <label>
+        <input type="checkbox" name="terms" />
+        Jag godkänner SJs köp villkor
+    </label>
+<p>Att betala: 365 SEK</p>
+<button type="button">Betala</button>
+</body>
+</html>

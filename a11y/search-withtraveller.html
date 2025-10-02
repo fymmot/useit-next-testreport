@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Sök resa</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 1rem;
+        }
+        button {
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        label.radio {
+            display: inline-block;
+            margin-bottom: 0;
+        }
+
+        fieldset {
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h1>Sök resa</h1>
+<fieldset>
+    <legend>Välj typ av resa</legend>
+    <label class="radio">
+        Enkelresa
+        <input type="radio" name="resetyp" checked>
+    </label>
+    <label class="radio">
+        Tur och retur
+        <input type="radio" name="resetyp">
+    </label>
+</fieldset>
+<label>
+    Från
+    <input type="text" value="Stockholm C">
+</label>
+<button>Byt plats på stationerna</button>
+<label>
+    Till
+    <input type="text" value="Göteborg C">
+</label>
+<button>
+    Öppna kalendern
+</button>
+<label>
+    Datum
+    <input type="text" value="2022-07-31">
+</label>
+
+<h2 id="travellers">Resenärer</h2>
+<ul aria-labelledby="travellers">
+    <li><button type="button" id="traveller1" onclick="location.href='edittraveller-saved.html'">Vuxen 1, med ledar- eller assistanshund. Tryck för att ändra, anpassa eller göra tillval</button></li>
+</ul>
+<button type="button">Lägg till resenär</button>
+<button type="button" onclick="location.href='timetable.html';">Sök resa</button>
+<script defer>
+    document.getElementById("traveller1").focus();
+</script>
+</body>
+</html>

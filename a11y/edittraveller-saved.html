@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Anpassa resenär</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 1rem;
+        }
+        button {
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        label.radio {
+            display: inline-block;
+            margin-bottom: none;
+        }
+
+        fieldset {
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        #addon-desc {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<nav><button type="button" onclick="location.href='index.html';">Stäng</button></nav>
+<h1>Anpassa resenär</h1>
+<label>
+    Resenärstyp
+    <select>
+        <option selected>Vuxen</option>
+        <option>Barn/ungdom upp till 25 år</option>
+        <option>Student, behöver kunna visa studentlegitimation</option>
+        <option>Pensionär, 65 år eller intyg</option>
+    </select>
+</label>
+<label>
+    SJ Prio/periodbiljett (frivilligt)
+    <select>
+        <option value="opt0">Inget valt</option>
+    </select>
+</label>
+<label>
+    Tillägg
+    <select aria-describedby="addon-desc" id="addon-select">
+        <option value="opt0">Inget valt</option>
+        <option value="opt1">Handikapplats (ej rullstol)</option>
+        <option value="opt2">Rullstolsplats</option>
+        <option value="opt3">Cykel</option>
+        <option value="opt4">Sällskapsdjur</option>
+        <option value="opt5" selected>Ledar- eller assistanshund</option>
+        <option value="opt6">Djurfri plats</option>
+    </select>
+    <span id="addon-desc">Till exempel barnvagn, rullstol, cykel, ledar- eller assistanshund</span>
+</label>
+<p id="info-text">
+    Ledar- eller assistanshund får medföras både i 1 och 2 klass. Hunden, som ska vara på golvet, får en egen kostnadsfri plats bredvid resenären.
+    <a href="doginfo.html">Läs mer om att resa med ledar- eller assistanshund</a>
+</p>
+<button type="button">Ta bort resenär</button>
+<button type="button" onclick="location.href='search-withtraveller.html';">Spara</button>
+<script defer>
+  const infoText = document.getElementById("info-text");
+  const addonSelect = document.getElementById("addon-select");
+  addonSelect.addEventListener("change", (e) => {
+    if (e.target.value === "opt5")
+      return infoText.removeAttribute("hidden");
+    return infoText.setAttribute("hidden", "hidden");
+  })
+</script>
+</body>
+</html>
